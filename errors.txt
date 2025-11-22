@@ -1,0 +1,12 @@
+Line 2: # === Valid flights ===,,,,, → comment line, ignored for data parsing
+Line 10: ,,,,, → missing flight_id field, missing origin field, missing destination field, missing departure_datetime field, missing arrival_datetime field, missing price field
+Line 11: # === Invalid flights (for testing validation) ===,,,,, → comment line, ignored for data parsing
+Line 12: BADLINE,NO_DATE,NO_TIME,,, → missing departure_datetime field, missing arrival_datetime field, missing price field
+Line 13: BA_BAD,RIX,LON,11/15/2025 11:00,INVALID_DATE,250 → invalid flight_id (must be 2-8 alphanumeric characters), invalid arrival datetime
+Line 14: SK404,OSL,RIX,11/15/2025 14:00,11/15/2025 12:00,120 → arrival before departure
+Line 15: W61025,XXX,RIX,11/16/2025 11:00,11/16/2025 13:00,80 → invalid origin code
+Line 16: QR1,DOH,SYD,INVALID_DATETIME,11/17/2025 23:30,980 → invalid departure datetime
+Line 17: KL1999,AMS,,11/14/2025 9:00,11/14/2025 11:15,180 → missing destination field
+Line 18: AY503,HEL,RIX,11/15/2025 13:20,11/15/2025 14:15,-10 → negative price value
+Line 19: LH999999999,FRA,LAX,11/13/2025 9:30,11/13/2025 18:10,700 → invalid flight_id (must be 2-8 alphanumeric characters)
+Line 20: SN2902,BRU,LHR,2025-13-40 10:00,2025-13-40 12:00,99.99 → invalid departure datetime, invalid arrival datetime
