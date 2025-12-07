@@ -3,17 +3,19 @@
 Flight Schedule Parser and Query Tool
 Main entry point for the application
 Author: Kodithuwakku Arachchige Chamod Chirantha Dilshan
-Student ID: 233AEB022
+Student ID:233AEB022
 """
 
-import argparse
-import sys
-from pathlib import Path
-from datetime import datetime
-from validator import FlightValidator
-from parser import CSVParser, JSONParser
-from query_engine import QueryEngine
-from utils import save_json, save_errors
+import argparse #helps you read command-line arguments
+import sys #Gives access to some system-level things
+from pathlib import Path #object-oriented way to handle file paths
+from datetime import datetime #handles dates and times 
+from validator import FlightValidator #Imports the FlightValidator class from validator.py
+
+from parser import CSVParser, JSONParser #CSVParser → reads and parses flight data from CSV files
+ #JSONParser → reads and parses flight data from JSON files.
+from query_engine import QueryEngine #Imports QueryEngine from query_engine.py
+from utils import save_json, save_errors #from utils import save_json, save_errors
 
 
 def parse_arguments():
@@ -119,9 +121,9 @@ def main():
             # Generate response filename with timestamp
             timestamp = datetime.now().strftime('%Y%m%d_%H%M')
             # IMPORTANT: Replace with your actual student information
-            student_id = "studentid"
-            name = "name"
-            lastname = "lastname"
+            student_id = "233AEB022"
+            name = "Chamod"
+            lastname = "Dilshan"
             response_file = f"response_{student_id}_{name}_{lastname}_{timestamp}.json"
             
             save_json(results, response_file)
