@@ -6,7 +6,7 @@ Author: Kodithuwakku Arachchige Chamod Chirantha Dilshan
 Student ID:233AEB022
 """
 
-import argparse #helps you read command-line arguments
+import argparse #helps to read command-line arguments
 import sys #Gives access to some system-level things
 from pathlib import Path #object-oriented way to handle file paths
 from datetime import datetime #handles dates and times 
@@ -120,7 +120,7 @@ def main():
             
             # Generate response filename with timestamp
             timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-            # IMPORTANT: Replace with your actual student information
+            
             student_id = "233AEB022"
             name = "Chamod"
             lastname = "Dilshan"

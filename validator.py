@@ -6,7 +6,7 @@ Handles all validation rules for flight records
 import re
 from datetime import datetime
 
-
+ #ENCAPSULATION
 class FlightValidator:
     """Validates flight data according to specification"""
     
